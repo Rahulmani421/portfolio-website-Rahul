@@ -75,6 +75,27 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+function attachResume() {
+    const resumeLink = document.querySelector('.resume-link');
+    if (resumeLink) {
+      resumeLink.setAttribute('href', 'portfolio-website-Rahul-master\assets\pdf');
+    } else {
+      console.error('Resume link element not found.');
+    }
+  }
+  
+  // Call the function to attach the resume
+  attachResume();
 
 
-
+  document.getElementById('resumeButton').addEventListener('click', function() {
+    var resumeContainer = document.getElementById('resumeContainer');
+    var resumeFrame = document.getElementById('resumeFrame');
+    if (resumeContainer.style.display === 'none' || resumeContainer.style.display === '') {
+        resumeFrame.src = 'assets/img/skill2.png'; // Use the relative path
+        resumeContainer.style.display = 'block';
+    } else {
+        resumeContainer.style.display = 'none';
+        resumeFrame.src = '';
+    }
+});

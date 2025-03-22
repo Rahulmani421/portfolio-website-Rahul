@@ -24,8 +24,9 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -40,11 +41,13 @@
             <!--===== HOME =====-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
-                    <h1 class="home__title"><span>RAHUL S</span><br></h1>
-
+                    <h1 class="home__title"><span>Hello</span><br></h1>
+                    <h2 class="home__title"><span>I'm Rahul</span><br></h2>
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
                     </div>
+
+                    
                 </div>
             </section>
             
@@ -58,15 +61,52 @@
                     </div>
 
                     <div>
-                        <h2 class="about__subtitle">I'am Rahul s</h2>
-                        <span class="about__profession">Aspiring IT Specialist</span>
+                        <h2 class="about__subtitle">RAHUL S</h2>
+                        <span class="about__profession">STUDENT</span>
                         <p class="about__text">A skilled MCA student eager to contribute to your IT team. I bring expertise in financial analytics and a passion for innovation.</p>
 
                         <div class="about__social">
-                            <a href="#" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
-                            <a href="#" class="about__social-icon"><i class='bx bxl-github' ></i></a>
-                            <a href="#" class="about__social-icon"><i class='bx bxl-dribbble' ></i></a>
+                            <a href="https://www.linkedin.com/in/mr-rahul-s-p/" target="_blank" class="about__social-icon">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            
+                            <a href="https://github.com/Rahulmani421" target="_blank" class="about__social-icon">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            
+                            <a href="https://dribbble.com/Zen_Ruler?onboarding=true&designer=true" target="_blank" class="about__social-icon">
+                                <i class='bx bxl-dribbble'></i>
+                            </a>
+                            
                         </div>
+                    </div>
+                </div>
+            </section>
+            <!--===== EDUCATION =====-->
+            <section class="education section" id="education">
+                <h2 class="section-title">Education</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle"><span>Bharathidasan University, Trichy</span></h3>
+                        <span class="skills__name">2024 - Present</span>
+                        <span class="skills__name">Master of Computer Applications (MCA) |Percent: 73.5%</span>
+                        
+                        <h3 class="skills__subtitle">Govt. Arts and Science College, Lalgudi</h3>
+                        <span class="skills__name">2021 - 2024</span>
+                        <span class="skills__name">Bachelor of Computer Applications(BCA )|Percent: 81%</span>
+                        
+                        <h3 class="skills__subtitle"><span>Govt. Hr. Sec. School, Keezhakkavanttakurichy, Ariyalur</span></h3>
+                        <span class="skills__name">2020 - 2021</span>
+                        <span class="skills__name">HSC|Percent: 83%</span>
+
+                        <button id="resumeButton">View Resume</button>
+        
+
+                    </div>
+
+                    <div id="resumeContainer" style="display: none;">
+                        <iframe id="resumeFrame" src="" width="100%" height="500px"></iframe>
                     </div>
                 </div>
             </section>
@@ -140,14 +180,14 @@
                         <h3 class="contact__subtitle">ADDRESS</h3>
                         <span class="contact__text">Elandaikudam, Ariyalur Dt - 621 851</span>
                     </div>
-                    <form action="" class="contact__form">
+                    <form action="send_email.php" method="POST" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
+                            <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                            <input type="email" name="email" placeholder="Email" class="contact__input" required>
                         </div>
-
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
+                    
+                        <textarea name="message" cols="0" rows="10" class="contact__input" required></textarea>
+                    
                         <input type="submit" value="Send" class="contact__button">
                     </form>
                 </div>
